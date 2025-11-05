@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Visualiser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Navigation bar -->
+  <nav class="navbar">
+    <div class="navbar-logo">CodeVisualizer</div>
+    <ul class="navbar-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="editor.html">Editor</a></li>
+      <li><a href="visualisation.html">Visualisation</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+    <div class="navbar-actions">
+      <button id="btnLoginNav"><a href="login.html">Login</a></button>
+    </div>
+    <div class="navbar-toggle" id="navbarToggle">☰</div>
+  </nav>
+
+  <!-- Login page / modal -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-form">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter username" required>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter password" required>
+        <button type="submit">Sign In</button>
+        <button type="button" class="close-btn" id="loginCloseBtn">Close</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <header class="hero" id="home">
+      <div class="hero-content">
+        <h1>See Your Code Come Alive</h1>
+        <p>Write code. Step through execution. Visualise variables, call stacks and data structures.</p>
+        <button id="startButton">Start Visualising</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="editor">
+        <h2>Your Code</h2>
+        <textarea id="codeInput" placeholder="Type your code here..." rows="15"></textarea>
+        <button id="runButton">Run / Visualise</button>
+        <div class="controls">
+          <button id="btnRestart">Restart</button>
+          <button id="btnPrev">Previous</button>
+          <button id="btnNext">Next</button>
+          <button id="btnPlay">Play</button>
+          <button id="btnPause">Pause</button>
+        </div>
+      </section>
+
+      <section id="visualisation">
+        <h2>Visualisation</h2>
+        <div id="output">(output will appear here)</div>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 My Code Visualiser</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
